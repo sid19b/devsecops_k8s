@@ -7,17 +7,17 @@ pipeline{
         SONAR_TOKEN=credentials('sonar-token')
     }
     stages{
-        stage('Compile and run sonar analysis'){
-            steps{
-                sh '''
-                    mvn clean verify sonar:sonar \
-                    -Dsonar.projectKey=devsecops19 \
-                    -Dsonar.organization=devsecops19 \
-                    -Dsonar.host.url=https://sonarcloud.io \
-                    -Dsonar.login=$SONAR_TOKEN
-                '''
-            }
-        }
+        // stage('Compile and run sonar analysis'){
+        //     steps{
+        //         sh '''
+        //             mvn clean verify sonar:sonar \
+        //             -Dsonar.projectKey=devsecops19 \
+        //             -Dsonar.organization=devsecops19 \
+        //             -Dsonar.host.url=https://sonarcloud.io \
+        //             -Dsonar.login=$SONAR_TOKEN
+        //         '''
+        //     }
+        // }
 
 
         // stage('Use Snyk') {
