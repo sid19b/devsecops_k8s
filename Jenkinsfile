@@ -51,7 +51,7 @@ pipeline{
         stage('kubernetes cluster and jenkins integrate'){
             //kubernetes cluster created using cli command 
             steps{
-                withKubeConfig([credentialsId: 'kubelogin']){
+                withKubeConfig([credentialsId: 'kubelogins']){
                     sh 'kubectl apply -f deployment.yaml -n=devsecops'
                 }
                 }
